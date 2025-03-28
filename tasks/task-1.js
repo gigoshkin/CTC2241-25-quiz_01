@@ -19,7 +19,38 @@
 - ყველა ობიექტს უნდა ჰქონდეს საკუთარი კონსტრუქტორი ფუნქცია ან კლასი
 */
 
-// თქვენი კოდი აქ
+class Animal {
+   constructor(name, age) {
+       this.name = name;
+       this.age = age;
+   }
+   
+   makeSound() {
+       return "Some sound";
+   }
+}
+
+class Dog extends Animal {
+   constructor(name, age, breed) {
+       super(name, age);
+       this.breed = breed;
+   }
+   
+   makeSound() {
+       return "Woof!";
+   }
+}
+
+class Cat extends Animal {
+   constructor(name, age, color) {
+       super(name, age);
+       this.color = color;
+   }
+   
+   makeSound() {
+       return "Meow!";
+   }
+}
 
 // ტესტის შემთხვევები
 const dog = new Dog("Rex", 3, "German Shepherd");

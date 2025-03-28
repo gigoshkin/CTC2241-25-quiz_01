@@ -24,11 +24,16 @@ const students = [
 // თქვენი კოდი აქ
 
 function sortByGrade(students) {
-  //
+  return [...students].sort((a, b) => b.grade - a.grade);
 }
 
 function sortByAgeAndGrade(students) {
-  //
+  return [...students].sort((a, b) => {
+    if (a.age !== b.age) {
+      return a.age - b.age;
+    }
+    return b.grade - a.grade;
+  });
 }
 
 console.log(sortByGrade(students));
